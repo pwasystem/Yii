@@ -1,0 +1,15 @@
+clear && \
+./yiic migrate --interactive=0 && \
+./yiic createuser username password email@mail.com
+
+
+clear && \
+./coalize/protected/yiic migrate --interactive=0 && \
+./coalize/protected/yiic createuser username password email@mail.com
+
+
+cGFzc3dvcmQ
+
+pass1
+
+dGVzdDE

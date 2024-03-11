@@ -1,0 +1,508 @@
+{
+	"info": {
+		"_postman_id": "ac28063d-5ec2-4bc4-a664-078a0449afc0",
+		"name": "Coalize",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "745324"
+	},
+	"item": [
+		{
+			"name": "Produtos",
+			"item": [
+				{
+					"name": "Lista",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-USERNAME",
+								"value": "test1",
+								"type": "text"
+							},
+							{
+								"key": "X-PASSWORD",
+								"value": "dGVzdDE",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Baerer ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": "localhost/api/produtos"
+					},
+					"response": []
+				},
+				{
+					"name": "Lista paginado",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-USERNAME",
+								"value": "test1",
+								"type": "text"
+							},
+							{
+								"key": "X-PASSWORD",
+								"value": "dGVzdDE",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": "localhost/api/produto/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Lista por cliente",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-USERNAME",
+								"value": "test1",
+								"type": "text"
+							},
+							{
+								"key": "X-PASSWORD",
+								"value": "dGVzdDE",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": "localhost/api/produtos/cliente/3"
+					},
+					"response": []
+				},
+				{
+					"name": "Exibe",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-USERNAME",
+								"value": "test1",
+								"type": "text"
+							},
+							{
+								"key": "X-PASSWORD",
+								"value": "dGVzdDE",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": "localhost/api/produtos/offset/1/limit/5"
+					},
+					"response": []
+				},
+				{
+					"name": "Novo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-USERNAME",
+								"value": "test1",
+								"type": "text"
+							},
+							{
+								"key": "X-PASSWORD",
+								"value": "dGVzdDE",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nome",
+									"value": "penico",
+									"type": "text"
+								},
+								{
+									"key": "preco",
+									"value": "12.99",
+									"type": "text"
+								},
+								{
+									"key": "cliente_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/api/produto",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"produto"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "penico",
+									"disabled": true
+								},
+								{
+									"key": "preco",
+									"value": "23.22",
+									"disabled": true
+								},
+								{
+									"key": "cliente_id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-USERNAME",
+								"value": "test1",
+								"type": "text"
+							},
+							{
+								"key": "X-PASSWORD",
+								"value": "dGVzdDE",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nome\":\"Caneca\",\"preco\":\"12.00\",\"cliente_id\":\"22\",\"foto\":null}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/api/produto/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Apaga",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-USERNAME",
+								"value": "test1",
+								"type": "text"
+							},
+							{
+								"key": "X-PASSWORD",
+								"value": "dGVzdDE",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost/api/produto/22",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"produto",
+								"22"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Cueca",
+									"disabled": true
+								},
+								{
+									"key": "preco",
+									"value": "5",
+									"disabled": true
+								},
+								{
+									"key": "cliente_id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Lista todos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-USERNAME",
+								"value": "test1",
+								"type": "text"
+							},
+							{
+								"key": "X-PASSWORD",
+								"value": "dGVzdDE",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": "localhost/api/clientes"
+					},
+					"response": []
+				},
+				{
+					"name": "Lista paginado",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-USERNAME",
+								"value": "test1",
+								"type": "text"
+							},
+							{
+								"key": "X-PASSWORD",
+								"value": "dGVzdDE",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": "localhost/api/clientes/offset/1/limit/5"
+					},
+					"response": []
+				},
+				{
+					"name": "Exibe",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-USERNAME",
+								"value": "test1",
+								"type": "text"
+							},
+							{
+								"key": "X-PASSWORD",
+								"value": "dGVzdDE",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": "localhost/api/cliente/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Novo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-USERNAME",
+								"value": "test1",
+								"type": "text"
+							},
+							{
+								"key": "X-PASSWORD",
+								"value": "dGVzdDE",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Baerer ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nome",
+									"value": "Joelson",
+									"type": "text"
+								},
+								{
+									"key": "cpf",
+									"value": "12312312387",
+									"type": "text"
+								},
+								{
+									"key": "cep",
+									"value": "14801076",
+									"type": "text"
+								},
+								{
+									"key": "logradouro",
+									"value": "avenida trevosa",
+									"type": "text"
+								},
+								{
+									"key": "numero",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "cidade",
+									"value": "Transilvânia",
+									"type": "text"
+								},
+								{
+									"key": "estado",
+									"value": "cp",
+									"type": "text"
+								},
+								{
+									"key": "sexo",
+									"value": "Masculino",
+									"type": "text"
+								}
+							]
+						},
+						"url": "localhost/api/cliente"
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-USERNAME",
+								"value": "test1",
+								"type": "text"
+							},
+							{
+								"key": "X-PASSWORD",
+								"value": "dGVzdDE",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":\"22\",\"nome\":\"Joelmo felício\",\"cpf\":\"12312312387\",\"cep\":\"14811000\",\"logradouro\":\"logradouro10\",\"numero\":\"101\",\"cidade\":\"cidade10\",\"estado\":\"sp\",\"complemento\":\"\",\"foto\":\"\",\"sexo\":\"Masculino\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/api/cliente/22"
+					},
+					"response": []
+				},
+				{
+					"name": "Apaga",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-USERNAME",
+								"value": "test1",
+								"type": "text"
+							},
+							{
+								"key": "X-PASSWORD",
+								"value": "dGVzdDE",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": "localhost/api/cliente/22"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
