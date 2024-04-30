@@ -1,5 +1,9 @@
 # Coalize
 
+# ATENÇÃO
+	Este projeto foi desenvolvido apenas para um processo seletivo e contém falhas graves de segurança.
+	Não é aconselhado o uso dessa estrutura em produção pois há muitas vulnerabilidades.
+
 ## Instalação
 
 ### 1. Crie o container utilizando o comando abaixo.
